@@ -3,8 +3,27 @@
 {% block bodyClass %}home-page{% endblock %}
 
 
-{% block main %}
-  <div class="inner bp-grid">
-    <div class="bp-col-12">Node Boilerplate</div>
-  </div>
-{% endblock %}
+{% block main -%}
+<div class="main">
+     <h2 class="title" data-id="hello">Priya Tirtha</h2>
+
+    <h3 class="tagline">Service designer living in Philadelphia:</h3>
+    <h2 class="sub-title">Recent Work</h2>
+
+     <h3 class="project-link" data-id="ootf"><a href="#ootf">Out of Town Films</a></h3>
+     <h3 class="project-link" data-id="cartuna"><a href="#cartuna">Cartuna</a></h3>
+
+     <div class="side-panel active" style="background: linear-gradient(to bottom, #fff, cyan)" data-id="hello">
+       Hello
+     </div>{#
+     #}<div class="side-panel" style="background: linear-gradient(to bottom, #ef837e 30%, #fff 100%)" data-id="ootf">
+       Out of Town Films
+       <br><br>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate id nostrum dignissimos delectus iure facere architecto corporis debitis, nihil quisquam rem, quia, praesentium nulla dolore reiciendis soluta adipisci dolorum! Dolore?</p>
+     </div>{#
+     #}<div class="side-panel"style="background: pink"  data-id="cartuna">
+       Cartuna
+     </div>
+</div>
+<div class="right-border"></div>
+{%- endblock %}

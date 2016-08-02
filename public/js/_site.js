@@ -1,5 +1,5 @@
 $(function() {
 
-  // require('./modules/test');
+  require('./home.js');
 
 });
