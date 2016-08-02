@@ -1,0 +1,229 @@
+// Flexible Grid System 5.3.1 | Less Plus | MIT License | flexible.gs
+
+.wrap() {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrap(@variable1) when (@variable1 = normal) {
+  display: block;
+  table-layout: auto;
+  -webkit-flex-direction: initial;
+  -ms-flex-direction: initial;
+  flex-direction: initial;
+  -webkit-flex-wrap: initial;
+  -ms-flex-wrap: initial;
+  flex-wrap: initial;
+  -webkit-justify-content: initial;
+  -ms-justify-content: initial;
+  justify-content: initial;
+  -webkit-align-content: initial;
+  -ms-align-content: initial;
+  align-content: initial;
+  -webkit-align-items: initial;
+  -ms-align-items: initial;
+  align-items: initial;
+  > * {
+    display: inline-block;
+  }
+}
+.wrap(@variable1) when (@variable1 = table) {
+  display: table;
+  table-layout: fixed;
+  -webkit-flex-direction: initial;
+  -ms-flex-direction: initial;
+  flex-direction: initial;
+  -webkit-flex-wrap: initial;
+  -ms-flex-wrap: initial;
+  flex-wrap: initial;
+  -webkit-justify-content: initial;
+  -ms-justify-content: initial;
+  justify-content: initial;
+  -webkit-align-content: initial;
+  -ms-align-content: initial;
+  align-content: initial;
+  -webkit-align-items: initial;
+  -ms-align-items: initial;
+  align-items: initial;
+  > * {
+    display: table-cell;
+  }
+}
+.wrap(@variable1) when (@variable1 = flexbox) {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  table-layout: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  > * {
+    display: inline-block;
+  }
+}
+.wrap(@variable1, @variable2) when (@variable1 = gutter) {
+  width: calc(~"100% +" @variable2);
+  margin-left: -@variable2 / 2;
+  margin-right: -@variable2 / 2;
+  padding-left: 0;
+  padding-right: 0;
+  > * {
+    padding-left: @variable2 / 2;
+    padding-right: @variable2 / 2;
+  }
+}
+.wrap(@variable1, @variable2) when (@variable1 = outside) {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: @variable2 / 2;
+  padding-right: @variable2 / 2;
+}
+.wrap(@variable1) when (@variable1 = top) {
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  > * {
+    vertical-align: top;
+  }
+}
+.wrap(@variable1) when (@variable1 = middle) {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  > * {
+    vertical-align: middle;
+  }
+}
+.wrap(@variable1) when (@variable1 = bottom) {
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  > * {
+    vertical-align: bottom;
+  }
+}
+.wrap(@variable1) when (@variable1 = between) {
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+}
+.wrap(@variable1) when (@variable1 = around) {
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-content: space-around;
+  -ms-align-content: space-around;
+  align-content: space-around;
+}
+.wrap(@variable1) when (@variable1 = baseline) {
+  -webkit-align-items: baseline;
+  -ms-align-items: baseline;
+  align-items: baseline;
+}
+.wrap(@variable1) when (@variable1 = center) {
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.wrap(@variable1) when (@variable1 = left) {
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+.wrap(@variable1) when (@variable1 = right) {
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+}
+.wrap(@variable1) when (@variable1 = reverse) {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+.wrap(@variable1) when (@variable1 = not-reverse) {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.wrap(@variable1) when (@variable1 = auto) {
+  > * {
+    width: auto;
+  }
+}
+.wrap(@variable1) when (isnumber(@variable1)) {
+  > * {
+    width: 100% / @variable1;
+  }
+}
+
+.col() {
+  display: inline-block;
+  min-height: 1px;
+  font-size: 1rem;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.col(@variable1) when (@variable1 = hidden) {
+  overflow: hidden;
+}
+.col(@variable1) when (@variable1 = not-hidden) {
+  display: inline-block;
+}
+.col(@variable1) when (@variable1 = first) {
+  -ms-flex-order: -1;
+  -webkit-order: -1;
+  order: -1;
+}
+.col(@variable1) when (@variable1 = not-first) {
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
+}
+.col(@variable1) when (@variable1 = last) {
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+.col(@variable1) when (@variable1 = not-last) {
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
+}
+.col(@variable1, @variable2) when (isnumber(@variable1)) {
+  width: 100% / @variable2 * @variable1;
+}
+
+@breakpoint-lg: ~"(max-width: 1024px)";
+@breakpoint-md: ~"(max-width: 768px)";
+@breakpoint-sm: ~"(max-width: 667px)";
