@@ -5,25 +5,96 @@
 
 {% block main -%}
 <div class="main">
-     <h2 class="title" data-id="hello">Priya Tirtha</h2>
+    <div class="left-panel p-grid">
+      <div class="p-col-4">
+        <h2 class="title" data-id="hello">Priya Tirtha</h2>
+      </div>
+      <div class="p-col-8">
+        <h4 class="externals"><a href="">Resume</a><a href="">Instagram</a><a href="">Twitter</a></h4>
+      </div>
+      <div class="p-col-12 short-desc">
+        <p>I am an experience designer with a background in service design.</p>
+        <p>I currently practice with <a href="http://spacely.space" target="_blank">Spacely</a> in Philadelphia</p>
+      </div>
 
-    <h3 class="tagline">Service designer living in Philadelphia:</h3>
-    <h2 class="sub-title">Recent Work</h2>
 
-     <h3 class="project-link" data-id="ootf"><a href="#ootf">Out of Town Films</a></h3>
-     <h3 class="project-link" data-id="cartuna"><a href="#cartuna">Cartuna</a></h3>
+      <div class="p-col-12 body-section">
+        <h2 class="sub-title">Recent Projects</h2>
+        <h3 class="project-link" data-id="ootf"><a href="#ootf">Out of Town Films</a></h3>
+        <h3 class="project-link" data-id="invisible-city"><a href="#invisible-city">Invisible City</a></h3>
+        <h3 class="project-link" data-id="museyroom"><a href="#museyroom">museyroom.io</a></h3>
+        <h3 class="project-link" data-id="cartuna"><a href="#cartuna">Cartuna</a></h3>
+      </div> 
+      
+      <div class="p-col-12 body-section">
+        <h2 class="sub-title">Former Positions</h2>
+        <h3 class="project-link" data-id="ootf"><a href="http://punkave.com" target="_blank">P'unk Avenue</a></h3>
+        <h3 class="project-link" data-id="invisible-city"><a href="http://smartdesign.com" target="_blank">Smart Design</a></h3>
+      </div>      
+
+      
+    </div>
+    
 
      <div class="side-panel active" style="background: linear-gradient(to bottom, #fff, cyan)" data-id="hello">
        Hello
      </div>{#
-     #}<div class="side-panel" style="background: linear-gradient(to bottom, #ef837e 30%, #fff 100%)" data-id="ootf">
-       Out of Town Films
-       <br><br>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate id nostrum dignissimos delectus iure facere architecto corporis debitis, nihil quisquam rem, quia, praesentium nulla dolore reiciendis soluta adipisci dolorum! Dolore?</p>
-     </div>{#
+     #}<div class="side-panel" style="background: linear-gradient(to bottom, #9991d6 30%, #fff 85%)" data-id="ootf">
+       <div class="side-panel__header">
+         <h4>Out of Town Films</h4>
+         <div class="side-panel__header__close"></div>
+       </div>
+       <div class="side-panel__body">
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">About</div>
+           <div class="side-panel__body__desc">A small team of cool guys travel around the world to create beautifully crafted music session videos.</div>
+           <div class="side-panel__body__sub">They’re based out of Philadelphia but never miss out on a trip to Johannesburg or Iceland to capture the next talented musician. Moving from a tumblr based site, we collaborated to create a web experience that promotes long story profiles on artists.</div>
+         </div>
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">Date</div>
+           <div class="side-panel__body__sub">Spring 2016</div>
+         </div>
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">Project Type</div>
+           <div class="side-panel__body__sub">Content Strategy, Web Design and Development</div>
+         </div>
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">Role</div>
+           <div class="side-panel__body__sub">UX + Visual Designer</div>
+         </div>
+       </div>
+       <div class="side-panel__footer"><a target="_blank" href="http://outoftownfilms.com">visit website</a></div>{#
+      
+     #}</div>{#
      #}<div class="side-panel"style="background: pink"  data-id="cartuna">
        Cartuna
      </div>
+     <div class="side-panel" style="background: linear-gradient(to bottom, #f4ec40 0%, #fff 65%)" data-id="invisible-city">{#
+       #}<div class="side-panel__header">
+         <h4>Invisible City</h4>
+         <div class="side-panel__header__close"></div>
+       </div>
+       <div class="side-panel__body">
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">About</div>
+           <div class="side-panel__body__desc">Invisible City’s goal is to increase awareness of the cultural contributions of Philadelphia at mid century.</div>
+           <div class="side-panel__body__sub">This interactive website consists of transcribed oral histories of vital participants in Philadelphia’s avant-garde community of the 1960s and 1970s with videos, images and an extensive chronology.</div>
+         </div>
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">Date</div>
+           <div class="side-panel__body__sub">Spring 2015</div>
+         </div>
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">Project Type</div>
+           <div class="side-panel__body__sub">Web Design and Development</div>
+         </div>
+         <div class="side-panel__body__section">
+           <div class="side-panel__body__label">Role</div>
+           <div class="side-panel__body__sub">UX + Visual Designer</div>
+         </div>
+       </div>
+       <div class="side-panel__footer"><a target="_blank" href="http://invisiblecity.uarts.edu">visit website</a></div>{#
+     #}</div>
 </div>
 <div class="right-border"></div>
 {%- endblock %}
