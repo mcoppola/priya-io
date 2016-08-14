@@ -9,6 +9,11 @@
   
   border:3px solid black;
   overflow: hidden;
+  
+  @media (max-width: @large)
+  {
+    padding: 27px 27px;
+  }
 }
 
 
@@ -26,6 +31,11 @@
 
 .left-panel 
 {
-  width: ~'calc(100% - 537px + 44.5px);'
+  width: ~'calc(100% - 537px + 44.5px);';
+  @media (max-width: 1128px)
+  {
+      width: ~'calc(100% - 50vw + 54px);'
+  }  
+
 }
 

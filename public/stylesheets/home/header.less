@@ -1,3 +1,28 @@
+
+.p-col-4.header-left
+{
+  .title
+  {
+    font-weight: bold;
+    margin-bottom: 40px;
+    line-height: 28px;
+  }
+  
+  @media (max-width: @large)
+  {
+    .title { margin-bottom: 0; }
+    width: 100%;
+  }
+}
+
+.p-col-8.header-right
+{
+  @media (max-width: @large)
+  {
+    width: 100%;
+    display: block;
+  }
+}
 h4.externals 
 {
   text-align: right;
@@ -5,20 +30,32 @@ h4.externals
   {
     text-decoration: none;
     color: #000;
+    line-height: 22px;
     
     
     &:not(:last-of-type)
     {
       margin-right: 55px;
     }
+    
+  }
+  @media (max-width: @large)
+  {
+    a 
+    {
+      display: block;
+      text-align: left;
+    }
+    margin-bottom: 40px;
   }
 }
+
 
 .main
 .short-desc
 {
   max-width: 487px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   
   p
   {
