@@ -8,11 +8,18 @@
   height: ~'calc(100vh - 54px)';
   
   border:3px solid black;
-  overflow: hidden;
+  overflow: scroll;
   
   @media (max-width: @large)
   {
     padding: 27px 27px;
+  }
+  @media (max-width: @compact)
+  {
+    width: ~'calc(100% - 26px)';
+    height: ~'calc(100vh - 26px)';
+    
+    margin: 13px;
   }
 }
 
@@ -27,15 +34,27 @@
   height: ~'calc(100vh - 54px)';
   background: #fff;
   border-left: 3px solid black;
+  
+  @media (max-width: @compact)
+  {
+    top: 13px;
+    width: 16px;
+    
+    height: ~'calc(100vh - 26px)';
+    // margin: 13px;
+  }
 }
 
 .left-panel 
 {
-  width: ~'calc(100% - 537px + 44.5px);';
+  width: ~'calc(100% - 537px + 44.5px)';
   @media (max-width: 1128px)
   {
-      width: ~'calc(100% - 50vw + 54px);'
+      width: ~'calc(100% - 50vw + 54px)';
   }  
-
+  @media (max-width: @compact)
+  {
+      width: ~'calc(100% - 26px)';
+  }
 }
 
