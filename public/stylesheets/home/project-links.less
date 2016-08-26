@@ -1,7 +1,8 @@
 .main
 .body-section
 {
-  margin-bottom: 66px;
+  &:not(:last-of-type) { margin-bottom: 66px; }
+  &:last-of-type { margin-bottom: 0px; }
 
   h2 
   {

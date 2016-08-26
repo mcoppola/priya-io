@@ -1,5 +1,5 @@
 $(function(){
-  var $links = $('.project-link, .title'),
+  var $links = $('.project-link[data-id], .title'),
       $close = $('.side-panel .side-panel__header__close'),
       $panels = $('.side-panel');
 
