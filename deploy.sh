@@ -10,8 +10,7 @@ ssh nodeapps@104.236.220.177 '
 eval `ssh-agent` && ssh-add ~/.ssh/id_rsa
 cd ~/sites/priya
 git pull origin master
-forever stop 1
-forever stop priya
+forever stop "priya"
 npm install
 forever --uid "priya" start -a app.js -p 3007
 '
