@@ -1,39 +1,97 @@
 @font-face {
-  font-family: 'Pressura';
-  src: url('../fonts/GT-Pressura-Mono-Regular.otf');
+  font-family: 'Bayle';
+  src: url('../fonts/Bayle-Mono.otf');
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Pressura';
-  src: url('../fonts/GT-Pressura-Mono-Bold.otf');
-  font-weight: bold;
+  font-family: 'America';
+  src: url('../fonts/GT-America-Standard-Regular.ttf');
+  font-weight: normal;
 }
-.pressura
+@font-face {
+  font-family: 'GZA';
+  src: url('../fonts/gza-seminegra.otf');
+  font-weight: normal;
+}
+.america
 {
-  font-family: 'Pressura';
+  font-family: 'America';
+  font-weight: normal;
+}
+.gza
+{
+  font-family: 'GZA';
+  font-weight: normal;
+}
+.bayle
+{
+  font-family: 'Bayle';
   font-weight: normal;
 }
 body
 {
-  .pressura;
+  .america;
 }
 
+@f-large: 30px;
+@f-medium: 24px;
+@f-small: 16px;
+@f-smaller: 14px;
+@f-tiny: 12px;
+
+
+.font-large {
+  font-size: @f-large;
+}
+.font-medium {
+  font-size: @f-medium;
+  line-height: 27px;
+}
+.font-small {
+  font-size: @f-small;
+}
+.font-smaller {
+  font-size: @f-smaller;
+}
+.font-tiny {
+  font-size: @f-tiny;
+}
 /* Defaults */
 h2
 {
   font-size: 24px;
+  letter-spacing: 1.32px;
+  line-height: 27px;
   font-weight: normal;
-
 }
 h3
 {
-  font-size: 18px;
+  max-width: 633px;
   font-weight: normal;
+}
+h4 
+{
+  max-width: 748px;
 }
 p 
 {
-  font-size:16px;
-  max-width: 530px;
+  // font-size:16px;
+
+  max-width: 633px;
   font-weight: normal;
 }
 
+
+a 
+{
+  color: @black;
+  opacity: 1;
+
+  .transition(opacity .15s ease-out);
+
+  &:hover 
+  {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

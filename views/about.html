@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% include 'components/header.html' %}
+
+{% block bodyClass %}p-home{% endblock %}
+
+
+{% block main -%}
+<div class="p-main">
+  <div class="p-fixed">
+    <div class="p-fixed__left">
+      <p class="p-contact"><a href="mailto:priyatirtha@gmail.com">Say hi back!</a></p>
+    </div>
+    <div class="p-fixed__right">
+      <p class="p-nav"><a href="/" class="color--black">Back Home</a></p>
+    </div>
+  </div>
+  <div class="p-grid">
+    {{ header() }}
+
+    <div class="p-about p-col-12">
+      <div class="p-inner">
+        <p>
+          I am a digital designer currently based in Philadelphia. I’ve been called a user experience designer, a visual designer, a strategist, and a researcher. I’ve enjoyed designing with small businesses, the government, artists, and small-named locals who are in need of thoughtful design and powerful visual communication.<br><br>
+          My background is in industrial and service design. I am driven by creating simple, yet functional design with an eye towards beauty and aesthetic.<br><br>
+          If you want, you can download my → <a href="/docs/priya.txt" class="color--blue bayle">resume</a>. 
+        </p>
+      </div>  
+    </div>
+  </div>
+</div>
+{%- endblock %}

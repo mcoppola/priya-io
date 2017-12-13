@@ -1,0 +1,62 @@
+.p-fixed
+{
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	.p-fixed__left
+	{
+		position: absolute;
+
+		.p-contact
+		{
+			position: relative;
+			top: 45vh;
+			width: 80px;
+			left: -13px;
+			display: inline-block;
+			.america;
+			font-size: @f-smaller;
+
+			a 
+			{
+				color: @black;
+			}
+
+			.transform(rotate(90deg) translate(50%, 0));
+
+			opacity: 1;
+
+			.transition(opacity .15s ease-out);
+
+			&:hover 
+			{
+				cursor: pointer;
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.p-fixed__right
+	{
+		position: absolute;
+		position: relative;
+		text-align: right;
+
+		.p-nav
+		{
+			position: relative;
+			top: 126px;
+			right: -6px;
+			display: inline-block;
+			.america;
+			font-size: @f-smaller;
+
+			.transform(rotate(-90deg) translate(50%, 0));
+		}
+	}
+}

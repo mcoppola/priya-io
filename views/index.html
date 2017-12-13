@@ -1,144 +1,165 @@
 {% extends 'base.html' %}
 
-{% block bodyClass %}home-page{% endblock %}
+{% include 'components/header.html' %}
+
+{% block bodyClass %}p-home{% endblock %}
 
 
 {% block main -%}
-<div class="main">
-    <div class="left-panel p-grid">
-      <div class="p-col-4 header-left">
-        <h2 class="title" data-id="hello">Priya Tirtha</h2>
-      </div>
-      <div class="p-col-8 header-right">
-        <!-- <h4 class="externals"><a href="https://www.instagram.com/priyamaya/" target="_blank">Instagram</a><a href="https://twitter.com/_priyamaya" target="_blank">Twitter</a></h4> -->
-      </div>
-      <div class="p-col-12 short-desc">
-        <p>I am an experience designer with a background in service design.</p>
-        <p>I currently practice with <a href="http://spacely.space" target="_blank">Spacely</a> in Philadelphia. Say hi at <a href="">priyatirtha@gmail.com</a>.</p>
-      </div>
-
-
-      <div class="p-col-12 body-section">
-        <h2 class="sub-title">Recent Projects</h2>
-        <h3 class="project-link" data-id="ootf"><a href="#ootf">Out of Town Films</a></h3>
-        <h3 class="project-link" data-id="invisible-city"><a href="#invisible-city">Invisible City</a></h3>
-        <h3 class="project-link" data-id="museyroom"><a href="#museyroom">museyroom.io</a></h3>
-        <h3 class="project-link" data-id="cartuna"><a href="#cartuna">Cartuna</a></h3>
-      </div> 
-      
-      <div class="p-col-12 body-section">
-        <h2 class="sub-title">Former Positions</h2>
-        <h3 class="project-link"><a href="http://punkave.com" target="_blank">P'unk Avenue</a></h3>
-        <h3 class="project-link"><a href="http://smartdesignworldwide.com" target="_blank">Smart Design</a></h3>
-      </div>      
+<div class="p-main">
+  <div class="p-fixed">
+    <div class="p-fixed__left">
+      <p class="p-contact"><a href="mailto:priyatirtha@gmail.com">Say hi back!</a></p>
     </div>
-    
+    <div class="p-fixed__right">
+      <p class="p-nav"><a href="/about" class="color--black">About Me</a></p>
+    </div>
+  </div>
+  <div class="p-grid">
+    {{ header() }}
 
-     <div class="side-panel" style="background: linear-gradient(to bottom, #9991d6 30%, #fff 85%)" data-id="ootf">
-       <div class="side-panel__header">
-         <h4>Out of Town Films</h4>
-         <div class="side-panel__header__close"></div>
-       </div>
-       <div class="side-panel__body">
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">About</div>
-           <div class="side-panel__body__desc">A small team of cool guys travel around the world to create beautifully crafted music session videos.</div>
-           <div class="side-panel__body__sub">They’re based out of Philadelphia but never miss out on a trip to Johannesburg or Iceland to capture the next talented musician. Moving from a tumblr based site, we collaborated to create a web experience that promotes long story profiles on artists.</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Date</div>
-           <div class="side-panel__body__sub">Spring 2016</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Project Type</div>
-           <div class="side-panel__body__sub">Content Strategy, Web Design and Development</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Role</div>
-           <div class="side-panel__body__sub">UX + Visual Designer</div>
-         </div>
-       </div>
-       <div class="side-panel__footer"><a target="_blank" href="http://outoftownfilms.com">visit website</a></div>{#
-      
-     #}</div>{#
-     #}<div class="side-panel" style="background: linear-gradient(to bottom, #f4ec40 0%, #fff 65%)" data-id="invisible-city">{#
-       #}<div class="side-panel__header">
-         <h4>Invisible City</h4>
-         <div class="side-panel__header__close"></div>
-       </div>
-       <div class="side-panel__body">
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">About</div>
-           <div class="side-panel__body__desc">Invisible City’s goal is to increase awareness of the cultural contributions of Philadelphia at mid century.</div>
-           <div class="side-panel__body__sub">This interactive website consists of transcribed oral histories of vital participants in Philadelphia’s avant-garde community of the 1960s and 1970s with videos, images and an extensive chronology.</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Date</div>
-           <div class="side-panel__body__sub">Spring 2015</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Project Type</div>
-           <div class="side-panel__body__sub">Web Design and Development</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Role</div>
-           <div class="side-panel__body__sub">UX + Visual Designer</div>
-         </div>
-       </div>
-       <div class="side-panel__footer"><a target="_blank" href="http://invisiblecity.uarts.edu">visit website</a></div>{#
-     #}</div>
-     <div class="side-panel" style="background: linear-gradient(to bottom, #f4c8fb 0%, #8f83ff 65%)" data-id="museyroom">{#
-       #}<div class="side-panel__header">
-         <h4>museyroom.io</h4>
-         <div class="side-panel__header__close"></div>
-       </div>
-       <div class="side-panel__body">
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">About</div>
-           <div class="side-panel__body__desc">Museyroom is a NYC band whose sound is a blend of pop,electronic, folk, and psychedelia.</div>
-           <div class="side-panel__body__sub">To accompany their album release, Pearly Whites, the band wanted to create an interactive listening experience. Using a simple user input, typing, the website allows listeners to create whacky, animated postcards.</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Date</div>
-           <div class="side-panel__body__sub">Spring 2016</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Project Type</div>
-           <div class="side-panel__body__sub">Web Design and Development</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Role</div>
-           <div class="side-panel__body__sub">UX + Visual Designer</div>
-         </div>
-       </div>
-       <div class="side-panel__footer"><a target="_blank" href="http://museyroom.io">visit website</a></div>{#
-     #}</div>
-     <div class="side-panel" style="background: linear-gradient(to bottom, #39E05B 0%, #fff 70%)" data-id="cartuna">{#
-       #}<div class="side-panel__header">
-         <h4>Cartuna</h4>
-         <div class="side-panel__header__close"></div>
-       </div>
-       <div class="side-panel__body">
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">About</div>
-           <div class="side-panel__body__desc">Cartuna is a small animation studio based in Brooklyn, NY. They create quirky, colorful adult cartoons.</div>
-           <div class="side-panel__body__sub">The website project was focused on the premier of their first 6 series. The design is meant to get users to the video content quickly, while experiencing something memorable and weird.</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Date</div>
-           <div class="side-panel__body__sub">Winter 2016</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Project Type</div>
-           <div class="side-panel__body__sub">Web Design and Development</div>
-         </div>
-         <div class="side-panel__body__section">
-           <div class="side-panel__body__label">Role</div>
-           <div class="side-panel__body__sub">UX + Visual Designer</div>
-         </div>
-       </div>
-       <div class="side-panel__footer"><a target="_blank" href="#">launching soon</a></div>{#
-     #}</div>
+    <div class="p-col-12 p-intro">
+      <div class="p-inner">
+        <div class="p-col-2">
+            &nbsp;
+        </div>{#
+      #}<div class="p-col-10">
+          <div class="p-intro__crown">
+            <svg width="183px" height="100px" viewBox="0 0 163 100">
+              <g transform="rotate(58 100, 0) translate(106 0)">
+                <path id="curve" d="M0.0401135924,100 C0.0401135924,100 -6.92863641,-51.7421875 162.836989,18.9453125"/>
+                <text width="162">
+                  <textPath xlink:href="#curve">
+                    Oh, hello!
+                  </textPath>
+                </text>
+              </g>
+              </svg>
+            </div>
+          <h3 class="p-intro__summary">My name is Priya. I am a designer who specializes in creating and conceptualizing digital experiences.</h3>
+          <p class="p-intro__sub">After an incredible opportunity to help design the City of Philadelphia’s governement website, I am exploring new design adventures. <br><br> Speaking of new adventures, this website is a work in progress. Check back soon for case studies of my work.</p>
+          <a class="p-intro__link" href="/about">more about me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-projects">
+      <div class="p-inner">
+        <div class="p-col-2">
+          <h3 class="p-projects__section">City of<br>Philadelphia</h3>
+        </div>{#
+      #}<div class="p-col-10">
+
+          <div class="p-project">
+            <h4 class="p-project__tag">
+              The Latest
+            </h4>
+            <h4 class="p-project__title">
+              Improving the way city employees publish  time-sensitive updates and news stories on phila.gov.
+            </h4>
+            <p class="p-project__sub">
+              Office of the Mayor → <a href="https://beta.phila.gov/the-latest/" target="_blank" class="color--blue">Visit The Latest</a>
+            </p>
+          </div>
+          <div class="p-project">
+            <h4 class="p-project__tag">
+              Finder Application
+            </h4>
+            <h4 class="p-project__title">
+              Helping Philadelphians of all ages stay active year-round.
+            </h4>
+            <p class="p-project__sub">
+              Philadelphia Parks & Recreation → <span class="color--gray">Launching 2018</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-col-12 p-projects">
+      <div class="p-inner">
+        <div class="p-col-2">
+          <h3 class="p-projects__section">Spacely</h3>
+        </div>{#
+      #}<div class="p-col-10">
+
+          <div class="p-project">
+            <h4 class="p-project__tag">
+              Out of Town Films
+            </h4>
+            <h4 class="p-project__title">
+              Long format profiles on emerging musicians, filmed around the world.
+            </h4>
+            <p class="p-project__sub">
+              <a href="http://outoftownfilms.com" target="_blank" class="color--blue">Visit the website</a>
+            </p>
+          </div>
+          <div class="p-project">
+            <h4 class="p-project__tag">
+              Pearly Whites
+            </h4>
+            <h4 class="p-project__title">
+              Interactive website for a psychedelic pop rock band.
+            </h4>
+            <p class="p-project__sub">
+              <a href="https://museyroom.io" target="_blank" class="color--blue">Visit the website</a>
+            </p>
+          </div>
+          <div class="p-project">
+            <h4 class="p-project__tag">
+              Cartuna
+            </h4>
+            <h4 class="p-project__title">
+              Weirdo animation studio.
+            </h4>
+            <p class="p-project__sub">
+              <a href="http://cartuna.com" target="_blank" class="color--blue">Visit the website</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-col-12 p-projects">
+      <div class="p-inner">
+        <div class="p-col-2">
+          <h3 class="p-projects__section">P'unk <br>Ave</h3>
+        </div>{#
+      #}<div class="p-col-10">
+          <div class="p-project">
+            <h4 class="p-project__tag">
+             Invisible City
+            </h4>
+            <h4 class="p-project__title">
+              Avant-garde historical chronology. 
+            </h4>
+            <p class="p-project__sub">
+             University of the Arts → <a href="http://invisiblecity.uarts.edu/" target="_blank" class="color--blue">Visit the website</a>
+            </p>
+          </div>
+          <div class="p-project">
+            <h4 class="p-project__tag">
+              Pearly Whites
+            </h4>
+            <h4 class="p-project__title">
+              Interactive website for a psychedelic pop rock band.
+            </h4>
+            <p class="p-project__sub">
+              Museyroom - Spacely
+            </p>
+          </div>
+          <div class="p-project">
+            <h4 class="p-project__tag">
+              Cartuna
+            </h4>
+            <h4 class="p-project__title">
+              Weirdo animation studio.
+            </h4>
+            <p class="p-project__sub">
+              Cartuna - Spacely
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="right-border"></div>
 {%- endblock %}
