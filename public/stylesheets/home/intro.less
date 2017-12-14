@@ -3,7 +3,7 @@
 	position: relative;
 	margin-top: 172px;
 
-	.p-col-10
+	.p-col-9
 	{
 		position: relative;
 	}
@@ -42,6 +42,11 @@
 		}
 
 		.transition(transform .35s ease-out);
+
+		@media (max-width: @compact)
+		{
+			left: -25px;
+		}
 	}
 
 	.p-intro__summary

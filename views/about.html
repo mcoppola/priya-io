@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% include 'components/header.html' %}
+{% include 'components/footer.html' %}
+
 
 {% block bodyClass %}p-home{% endblock %}
 
@@ -22,10 +24,11 @@
         <p>
           I am a digital designer currently based in Philadelphia. I’ve been called a user experience designer, a visual designer, a strategist, and a researcher. I’ve enjoyed designing with small businesses, the government, artists, and small-named locals who are in need of thoughtful design and powerful visual communication.<br><br>
           My background is in industrial and service design. I am driven by creating simple, yet functional design with an eye towards beauty and aesthetic.<br><br>
-          If you want, you can download my → <a href="/docs/priya.txt" class="color--blue bayle">resume</a>. 
+          If you want, you can download my → <a href="/docs/Priya_Tirtha_Resume.pdf" target="_blank" class="color--blue bayle">resume</a>. 
         </p>
       </div>  
     </div>
+    {{ footer() }}
   </div>
 </div>
 {%- endblock %}

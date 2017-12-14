@@ -34,7 +34,7 @@
   .p-col-10 { .col(10, 12); }
   .p-col-12 { .col(12, 12); }
 
-  @media @compact
+  @media (max-width: @compact)
   {
     .p-col-2,
     .p-col-3
@@ -55,7 +55,7 @@
     }
   }
 
-  @media @smallest
+  @media (max-width: @smallest)
   {
     [class^='p-col-']
     {

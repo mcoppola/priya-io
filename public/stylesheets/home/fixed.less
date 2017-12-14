@@ -59,4 +59,12 @@
 			.transform(rotate(-90deg) translate(50%, 0));
 		}
 	}
+
+	@media (max-width: @compact)
+	{
+		.p-fixed__left, .p-fixed__right
+		{
+			display: none;
+		}
+	}
 }

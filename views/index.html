@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% include 'components/header.html' %}
+{% include 'components/footer.html' %}
 
 {% block bodyClass %}p-home{% endblock %}
 
@@ -20,10 +21,10 @@
 
     <div class="p-col-12 p-intro">
       <div class="p-inner">
-        <div class="p-col-2">
+        <div class="p-col-3">
             &nbsp;
         </div>{#
-      #}<div class="p-col-10">
+      #}<div class="p-col-9">
           <div class="p-intro__crown">
             <svg width="183px" height="100px" viewBox="0 0 163 100">
               <g transform="rotate(58 100, 0) translate(106 0)">
@@ -45,10 +46,10 @@
 
     <div class="p-col-12 p-projects">
       <div class="p-inner">
-        <div class="p-col-2">
+        <div class="p-col-3">
           <h3 class="p-projects__section">City of<br>Philadelphia</h3>
         </div>{#
-      #}<div class="p-col-10">
+      #}<div class="p-col-9">
 
           <div class="p-project">
             <h4 class="p-project__tag">
@@ -77,10 +78,10 @@
     </div>
     <div class="p-col-12 p-projects">
       <div class="p-inner">
-        <div class="p-col-2">
+        <div class="p-col-3">
           <h3 class="p-projects__section">Spacely</h3>
         </div>{#
-      #}<div class="p-col-10">
+      #}<div class="p-col-9">
 
           <div class="p-project">
             <h4 class="p-project__tag">
@@ -120,10 +121,10 @@
     </div>
     <div class="p-col-12 p-projects">
       <div class="p-inner">
-        <div class="p-col-2">
+        <div class="p-col-3">
           <h3 class="p-projects__section">P'unk <br>Ave</h3>
         </div>{#
-      #}<div class="p-col-10">
+      #}<div class="p-col-9">
           <div class="p-project">
             <h4 class="p-project__tag">
              Invisible City
@@ -137,29 +138,31 @@
           </div>
           <div class="p-project">
             <h4 class="p-project__tag">
-              Pearly Whites
+              American Poetry Review
             </h4>
             <h4 class="p-project__title">
-              Interactive website for a psychedelic pop rock band.
+              Poetry, literary criticism, interviews, and essays.
             </h4>
             <p class="p-project__sub">
-              Museyroom - Spacely
+              <a href="http://aprweb.org/" target="_blank" class="color--blue">Visit the website</a>
             </p>
           </div>
           <div class="p-project">
             <h4 class="p-project__tag">
-              Cartuna
+              Science Center
             </h4>
             <h4 class="p-project__title">
-              Weirdo animation studio.
+              Philadelphia's center for innovation, entrepreneurship and technology commercialization.
             </h4>
             <p class="p-project__sub">
-              Cartuna - Spacely
+              <a href="https://www.sciencecenter.org/" target="_blank" class="color--blue">Visit the website</a>
             </p>
           </div>
         </div>
       </div>
     </div>
+    
+  {{ footer() }}
   </div>
 </div>
 {%- endblock %}
